@@ -91,6 +91,18 @@ nav.scrolled{background:rgba(8,8,10,.82);backdrop-filter:blur(18px);-webkit-back
 @media(max-width:1020px){.ev-grid{grid-template-columns:1fr 1fr}.ev.big{grid-column:span 2}.ev.wide{grid-column:span 2;aspect-ratio:16/8}}
 @media(max-width:640px){.ev-grid{grid-template-columns:1fr}.ev.big,.ev.wide{grid-column:span 1;aspect-ratio:16/10}}
 
+/* ---------- backstage vidéos ---------- */
+.bs-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:56px}
+.bs{position:relative;border-radius:22px;overflow:hidden;border:1px solid var(--line);aspect-ratio:16/9;background:#000;margin:0}
+.bs video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.bs .cap{position:absolute;inset:auto 0 0 0;padding:18px 22px;background:linear-gradient(180deg,transparent,rgba(5,5,7,.88));z-index:2;display:flex;flex-direction:column;gap:2px}
+.bs .cap b{font-family:var(--serif);font-size:20px;font-weight:600}
+.bs .cap span{font-size:12.5px;color:#c9c5bb}
+.bs .rec{position:absolute;top:14px;left:14px;z-index:2;display:flex;align-items:center;gap:8px;background:rgba(8,8,10,.55);backdrop-filter:blur(8px);border:1px solid var(--line);padding:6px 14px;border-radius:100px;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:#f0d9a8}
+.bs .rec::before{content:"";width:7px;height:7px;border-radius:50%;background:#e0442e;animation:blink 1.2s infinite}
+@keyframes blink{50%{opacity:.15}}
+@media(max-width:640px){.bs-grid{grid-template-columns:1fr}}
+
 /* reels colonne défilante */
 .reels{position:relative;height:600px;overflow:hidden;display:flex;gap:18px;mask-image:linear-gradient(180deg,transparent,#000 12%,#000 88%,transparent)}
 .reel-col{display:flex;flex-direction:column;gap:18px;animation:scrollUp 26s linear infinite}
@@ -397,6 +409,20 @@ footer{border-top:1px solid var(--line);padding:60px 0 40px;background:var(--bg2
       <figure class="ev rv d1"><img data-img="e04" alt="Roland-Garros — invitations en loge"><span class="pin">Roland-Garros</span><figcaption><b>Événements sportifs</b><span>Invitations en loge & tribunes VIP</span></figcaption></figure>
       <figure class="ev rv d2"><img data-img="e03" alt="Festival — accès VIP"><span class="pin">Festivals</span><figcaption><b>Festivals & concerts</b><span>Accès VIP, backstage & rooftops</span></figcaption></figure>
       <figure class="ev wide rv d3"><img data-img="e02" alt="Villa créateurs à Ibiza au coucher du soleil"><span class="pin">Ibiza · Dubaï · Bali</span><figcaption><b>Trips créateurs</b><span>Des villas entre talents pour créer, se former et produire du contenu ensemble</span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="backstage">
+  <div class="wrap">
+    <span class="eyebrow rv">Backstage</span>
+    <h2 class="section-title rv d1">En tournage avec nous.<br><span class="gold">Mets-toi dans l'image.</span></h2>
+    <p class="section-sub rv d2">Défilés, plateaux de tournage, studios photo, villas de production : voilà à quoi ressemble une semaine avec CVagency. Que tu sois créateur·rice ou marque, la prochaine, c'est la tienne.</p>
+    <div class="bs-grid">
+      <figure class="bs rv"><video src="backstage_defile.mp4" autoplay muted loop playsinline preload="metadata"></video><span class="rec">Live · Fashion Week</span><div class="cap"><b>Défilé — Paris</b><span>Nos talents au premier rang, nos images partout</span></div></figure>
+      <figure class="bs rv d1"><video src="backstage_tournage.mp4" autoplay muted loop playsinline preload="metadata"></video><span class="rec">Rec · Plateau</span><div class="cap"><b>Sur le plateau</b><span>Tournage brand content avec équipe complète</span></div></figure>
+      <figure class="bs rv d2"><video src="backstage_studio.mp4" autoplay muted loop playsinline preload="metadata"></video><span class="rec">Rec · Studio</span><div class="cap"><b>Shooting studio</b><span>Direction artistique, lumière, stylisme : on gère</span></div></figure>
+      <figure class="bs rv d3"><video src="backstage_villa.mp4" autoplay muted loop playsinline preload="metadata"></video><span class="rec">Live · Creator trip</span><div class="cap"><b>Villa de production</b><span>Créer du contenu au soleil, entre talents</span></div></figure>
     </div>
   </div>
 </section>
